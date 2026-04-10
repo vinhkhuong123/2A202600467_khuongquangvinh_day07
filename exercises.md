@@ -95,23 +95,7 @@ Mỗi thành viên **tự chọn strategy riêng** để thử trên cùng bộ 
 - Thiết kế custom strategy cho domain (ví dụ: chunk by Q&A pairs, by sections, by headers)
 - Mỗi thành viên nên thử strategy **khác nhau** để có gì so sánh
 
-```python
-class CustomChunker:
-    """Your custom chunking strategy for [your domain].
 
-    Design rationale: [explain why this strategy fits your data]
-    """
-
-    def chunk(self, text: str) -> list[str]:
-        # Your implementation here
-        ...
-```
-
-**Step 3 — So sánh:** Custom/tuned strategy vs baseline trên cùng tài liệu.
-
-> **Ghi kết quả vào:** Report — Section 3 (Chunking Strategy)
-
----
 
 ### Exercise 3.2 — Chuẩn Bị Benchmark Queries
 
@@ -145,6 +129,11 @@ Call `compute_similarity()` on 5 pairs of sentences. **Before running**, predict
 ### Exercise 3.4 — Chạy Benchmark & So Sánh Trong Nhóm
 
 **Step 1:** Mỗi thành viên chạy 5 benchmark queries với strategy riêng. Ghi kết quả top-3 cho mỗi query.
+1. "Indeed's CEO Chris Hyams mentions that using AI (GPT-4o mini) for job matching resulted in what 2. 2.percentage increase in job applications started?",
+2. "How do you install FastHTML according to the tutorial?",
+3. "What is the rule for input_tokens in the Canonical Usage Record regarding cached tokens in Hermes pricing?",
+4. "What are the four main layers of the High-Level Architecture for AI Performance Guardrails?",
+5. "According to the RAG System Design, what should the assistant do if the retrieval results are weak or contradictory?"
 
 **Step 2:** So sánh kết quả trong nhóm:
 - Strategy nào cho retrieval tốt nhất? Tại sao?
